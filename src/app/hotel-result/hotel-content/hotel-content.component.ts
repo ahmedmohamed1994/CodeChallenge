@@ -124,16 +124,12 @@ getAvailable(){
 // }
 let dateFrom = this.fromDate;
 let dateTo = this.toDate;
-console.log(dateFrom);
-console.log(dateTo);
 
 let d1 = dateFrom.split("-");
-let d2 = dateTo.split("-");
+let d2 = dateTo.split("-"); 
 
 let from_ = new Date(d1[2], parseInt(d1[1])-1, d1[0]);  // -1 because months are from 0 to 11
 let to_   = new Date(d2[2], parseInt(d2[1])-1, d2[0]); 
-
-
 
 let dates= ["01-06-2020", "02-07-2020", "02-08-2020", "02-09-2020", "02-07-2023", "12-10-2020", "02-011-2020"];
 

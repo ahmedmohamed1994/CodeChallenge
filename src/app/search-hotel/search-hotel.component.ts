@@ -35,7 +35,7 @@ export class SearchHotelComponent implements OnInit {
         autoclose: true,
         title: "Check In",
         orientation: "bottom auto",
-        format: "dd-mm-yyyy"
+        toggleActive: true
 
       });
       function padStr(num, size) {
@@ -54,7 +54,7 @@ export class SearchHotelComponent implements OnInit {
         autoclose: true,
         title: "Check out",
         orientation: " auto",
-        format: "dd-mm-yyyy"
+        toggleActive: true
       });
 
 
@@ -62,7 +62,7 @@ export class SearchHotelComponent implements OnInit {
       $('input[name="from_date"]').datepicker().on('changeDate', function () {
         let fromDate = $('input[name="from_date"]').datepicker('getDate');
         let toDate = $('input[name="to_date"]').datepicker('getDate');
-        let formatted_fromDate = padStr(fromDate.getDate(), 2) + '-' + padStr(fromDate.getMonth() + 1, 2) + '-' +  fromDate.getFullYear();
+        let formatted_fromDate = padStr(fromDate.getMonth() + 1, 2) + '/' + padStr(fromDate.getDate(), 2) + '/' + fromDate.getFullYear();
         $('input[name="to_date"]').datepicker('setStartDate', formatted_fromDate);
         $('input[name="to_date"]').removeAttr('disabled');
         $('input[name="to_date"]').datepicker('show');
@@ -73,7 +73,7 @@ export class SearchHotelComponent implements OnInit {
       $('input[name="to_date"]').datepicker().on('changeDate', function () {
         let toDate = $('input[name="to_date"]').datepicker('getDate');
         if (toDate) {
-          let formatted_toDate = padStr(toDate.getDate(), 2) + '-' + padStr(toDate.getMonth() + 1, 2) + '-'  + toDate.getFullYear();
+          let formatted_toDate = padStr(toDate.getMonth() + 1, 2) + '/' + padStr(toDate.getDate(), 2) + '/' + toDate.getFullYear();
           
         }
 
