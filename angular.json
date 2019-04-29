@@ -23,9 +23,21 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/nova-light/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "src/assets/css/bootstrap-datepicker.min.css",
+              "src/assets/css/ion.rangeSlider.min.css",
+              "src/assets/css/ion.rangeSlider.skinFlat.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/bootstrap-datepicker.min.js",
+              "src/assets/js/ion.rangeSlider.min.js"
+            ]
           },
           "configurations": {
             "production": {

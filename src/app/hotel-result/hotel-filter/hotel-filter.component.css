@@ -1,0 +1,13 @@
+.filter {
+    margin-top: 20px;
+}
+a.show-more-less {
+    padding-right: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+ 

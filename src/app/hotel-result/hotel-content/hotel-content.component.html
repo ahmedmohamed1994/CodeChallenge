@@ -1,0 +1,41 @@
+<div class="row ">
+
+  <div class="actions">
+    <a class="sorting-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+      aria-controls="collapseExample">
+      Sorting
+    </a>
+
+    <span class="displaying">
+      Displaying {{displayedHotels.length}} hotel of {{hotels.length}} hotels. Total Nights: {{numberOfNights}} night
+    </span>
+    <div class="collapse sorting" id="collapseExample">
+      <div class="card card-body">
+        <div class="col-xs-12">
+          <p class="sorting">
+            <span (click)="sort('high')">High Price</span>
+            <span (click)="sort('low')">Low Price</span>
+            <span (click)="sort('a-z')">A-Z Hotel</span>
+            <span (click)="sort('z-a')">Z-A Hotel</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-12 hotel" *ngFor="let hotel of displayedHotels">
+    <div class="card">
+      <div class="card-header">
+        {{hotel.name}} - 
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">City: {{hotel.city}}</li>
+        <li class="list-group-item">Price: {{hotel.price}}</li>
+        <!-- <li class="list-group-item"> {{getAvailable(hotel.availability.from,hotel.availability.to)}}</li> -->
+      </ul>
+    </div>
+  </div>
+  <button *ngIf="displayLoadMoreBtn" (click)="loadMoreHotels()" class="btn-search text-center">Load More 
+</button>
+
+</div>

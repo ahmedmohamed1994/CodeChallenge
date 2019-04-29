@@ -1,0 +1,59 @@
+<div class="filter">
+    <div class="card">
+        <div class="card-header">
+           Price
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+              <div class="price-filter-double">
+                  <input type="text"  id="filterByPrice" name="example_name" value="" />
+              </div>
+          </li>
+        
+        </ul>
+      </div>
+    <div class="card">
+        <div class="card-header">
+           Hotel Name
+        </div>
+        <ul class="list-group list-group-flush">
+          
+          <li class="list-group-item" *ngFor="let hotelName of hotelNames |slice:0:limitNames ">
+              <mat-checkbox (change)="filter($event,'hotelNames')" [value]="hotelName">{{hotelName}}
+                  ({{ totals.hotelNames[hotelName] }})
+              </mat-checkbox>
+              
+          </li>
+          
+        </ul>
+        <a *ngIf="displayNames" (click)="showMore('names')" class="show-more-less">show More
+           <i class="pi pi-angle-double-right"></i>
+          </a>
+        <a *ngIf="!displayNames" (click)="showLess('names')" class="show-more-less">show Less
+            <i class="pi pi-angle-double-right"></i>
+        </a>
+
+      </div>
+    <div class="card">
+        <div class="card-header">
+           City Name
+        </div>
+        <ul class="list-group list-group-flush">
+          
+         
+          <li class="list-group-item" *ngFor="let hotelCity of hotelCities |slice:0:limitCities ">
+              <mat-checkbox (change)="filter($event,'hotelCities')" [value]="hotelCity">{{hotelCity}}
+                  ({{ totals.hotelCities[hotelCity] }})
+              </mat-checkbox>
+          </li>
+         
+        </ul>
+        <a *ngIf="displayCities" (click)="showMore('cities')" class="show-more-less">show More
+            <i class="pi pi-angle-double-right"></i>
+           </a>
+        <a *ngIf="!displayCities" (click)="showLess('cities')" class="show-more-less">show Less
+            <i class="pi pi-angle-double-right"></i>
+        </a>
+      </div>
+</div>
+

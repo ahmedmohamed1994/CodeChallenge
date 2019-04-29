@@ -1,0 +1,33 @@
+
+<div class="all">
+    <div class="wrapper">
+        <h1><a  [routerLink]="['/']"> E2E Code Challenge</a></h1>
+        <hr>
+        <div class="card">
+          <div class="card-header">
+            Search Hotel
+          </div>
+          <div class="card-body">
+          <div class="row">
+            <div class="col-md-4">
+                <input type="text" readonly placeholder="Check in" class="form-control"  name="from_date">
+                <div class="input-group-addon">
+                    <i class="pi pi-calendar"></i>
+                </div>    </div>
+            <div class="col-md-4">
+                <input type="text" readonly disabled placeholder="Check out" class="form-control"  name="to_date">
+                <div class="input-group-addon">
+                    <i class="pi pi-calendar"></i>
+                </div>    </div>
+            <div class="col-md-4">
+              <button (click)="SearchHotel()" class="btn-search">Search <i class="pi pi-search"></i></button>
+            </div>
+          </div>
+            
+          </div>
+        </div>
+      </div>
+</div>
+
+  
+

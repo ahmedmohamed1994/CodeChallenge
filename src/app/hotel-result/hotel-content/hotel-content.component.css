@@ -1,0 +1,39 @@
+.hotel {
+    padding-right: 100px;
+    float: left;
+    margin: 20px 0;
+}
+.actions {
+    padding-left: 15px;
+    padding-top: 15px;
+    width: 90%;
+}
+p.sorting {
+    text-align: center;
+    padding-top: 15px;
+}
+.displaying {
+    text-align: center;
+    padding-left: 20px;
+}
+.sorting>span {
+    color: #fff;
+    background: #007ad9;
+    margin-right: 100px;
+    padding: 6px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+div#collapseExample {
+    width: 100%;
+    height: 95px;
+    padding-top: 30px;
+}
+button.btn-search.text-center {
+    border-radius: 3px;
+    border: none;
+    padding: 6px 30px;
+    margin: 20px auto;
+    color: #fff;
+    background: #005b9f;
+}

@@ -1,0 +1,38 @@
+.wrapper {
+    padding-top: 20px;
+    width: 70%;
+    display: block;
+    margin: auto;
+}
+.wrapper>h1 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold
+}
+.card-header {
+    text-align: center;
+}
+button.btn-search {
+    border-radius: 5px;
+    width: 50%;
+    border: none;
+    padding: 8px 0;
+    background: #007ad9;
+    color: #fff;
+    float: right;
+}
+i.pi.pi-search {
+    position: absolute;
+    bottom: 7px;
+    right: 40px;
+}
+i.pi.pi-calendar {
+    right: 30px;
+    position: absolute;
+    top: 10px;
+    color: #007ad9;
+}
+.form-control {
+    background-color: #ffffff;
+    opacity: 1;
+}
